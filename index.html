@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.bg {
+			width: 75px;
+			height: 75px;
+			background-size: 100%;
+		}
+		.bg1{
+			background-color: skyblue;
+		}
+		.dot{
+
+		}
+		.loseScreen{
+			background-color: gray;
+			width: 1500px;
+			height: 1500px;
+			position: absolute;
+			left: 60px;
+			top: 225px;
+			display: none;
+		}
+		.WinScreen{
+			background-color: Yellow;
+			width: 650px;
+			height: 550px;
+			position: absolute;
+			left: 60px;
+			top: 225px;
+			display: none;
+		}
+		.text-yel{color: yellow;}.text-gre{color: green;}
+		.text-blu{color: blue;}.text-red{color: red;}	
+	</style>
+</head>
+<body style="background-image: url(phone.avif); background-size: 100% 126%;background-image: url(phone.webp)">
+	<!-- это div-родитель -->
+	<div class="col-7 mx-auto">
+		<div>
+			<div style="display: flex;">
+				<h1 class="task">Найди корабли противника</h1>
+				<h1>Попытки:</h1><h1 class="lifes">15</h1>
+			</div>
+			<div>
+				<h3 class="text-yel text5">корабль с 5 клетками: 1</h3>
+				<h3 class="text-red text4">корабль с 4 клетками: 2</h3>
+				<h3 class="text-gre text3">корабль с 3 клетками: 3</h3>
+				<h3 class="text-blu text2">корабль с 2 клетками: 3</h3>
+			</div>
+		</div>
+		<!-- Дивы с нумерацией 1, 2, 3 и т.д. -->
+		<div class="row">
+			<div class=" py-3 text-center bg1 bg border">
+
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>1</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>2</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>3</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>4</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>5</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>6</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>7</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>8</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>9</h4>
+			</div>
+			<div class=" py-3 text-center bg1 bg border">
+				<h4>10</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>A</h4>
+			</div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor2"></div>
+			<div class="py-4 bg border kor2"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor5"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>B</h4>
+			</div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor5"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>C</h4>
+			</div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor5"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>D</h4>
+			</div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor2"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor5"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>E</h4>
+			</div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor2"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor2"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor5"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>F</h4>
+			</div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor2"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>G</h4>
+			</div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>H</h4>
+			</div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>I</h4>
+			</div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+		</div>
+		<div class="row">
+			<div class="py-4 text-center bg border">
+				<h4>J</h4>
+			</div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border kor3"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border dot"></div>
+			<div class="py-4 bg border kor4"></div>
+			<div class="py-4 bg border dot"></div>
+		</div>
+		<div class="loseScreen">
+			<h1>You lost</h1>
+			<img src="skull.jpeg">
+			<h1>Try again?</h1>
+			<button href="index.html">Click me to try again</button>
+		</div>
+		<div class="WinScreen">
+			<h1>You Won!!</h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let dots = document.querySelectorAll(".dot")
+		let kors2 = document.querySelectorAll(".kor2")
+		let kors3 = document.querySelectorAll(".kor3")
+		let kors4 = document.querySelectorAll(".kor4")
+		let kors5 = document.querySelectorAll(".kor5")
+
+		let lf = 15
+		let lifes = document.querySelector(".lifes")
+
+		for(let i=0;i<dots.length;i++){
+			dots[i].onclick = function(){
+				dots[i].style.backgroundImage = "url(dot.png)"
+				lifes.innerHTML = (lf-=1)
+				if(lf==0){
+					alert("You lose")
+				}
+			}
+		}
+			let numb2 = [0,0,0,0,0,0]
+			for(let i=0;i<kors2.length;i++){
+				kors2[i].onclick = function(){
+					if(numb2[i]==0){
+						kors2[i].style.backgroundColor = "blue"
+						numb2[i] = 1
+					}
+					if(i==(kors2.length-1)){
+						document.querySelector(".text2").style.textDecoration = "line-through"
+					}
+				}
+			}
+			let numb3 = [0,0,0,0,0,0,0,0,0]
+			for(let i=0;i<kors3.length;i++){
+				kors3[i].onclick = function(){
+					if(numb3[i]==0){
+						kors3[i].style.backgroundColor = "green"
+						numb3[i] = 1
+					}
+					if(i==8){
+						document.querySelector(".text3").style.textDecoration = "line-through"
+					}
+				}
+			}
+			let numb4 = [0,0,0,0,0,0,0,0]
+			for(let i=0;i<kors4.length;i++){
+				kors4[i].onclick = function(){
+					if(numb4[i]==0){
+						kors4[i].style.backgroundColor = "red"
+						numb4[i] = 1
+					}
+					if(i==(kors4.length-1)){
+						document.querySelector(".text4").style.textDecoration = "line-through"
+					}
+				}
+			}
+			let numb5 = [0,0,0,0,0]
+			for(let i=0;i<kors5.length;i++){
+				kors5[i].onclick = function(){
+					if(numb5[i]==0){
+						kors5[i].style.backgroundColor = "yellow"
+						numb5[i] = 1
+					}
+					if(i==(kors5.length-1)){
+						document.querySelector(".text5").style.textDecoration = "line-through"
+					}
+				}
+			}
+
+	</script>
+</body>
+</html>
